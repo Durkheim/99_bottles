@@ -9,8 +9,9 @@ describe Bottles do
 
 		context "when more than 2 bottles of beer on the wall" do
 			specify "that 'bottle' should be plural based on quantity and the action is to take 'one' down" do 
-				expect(bottles.verse(98)).to eq(
-					"98 bottles of beer on the wall, 98 bottles of beer.\nTake one down and pass it around, 97 bottles of beer on the wall.\n\n"
+				number_of_bottles = rand(3..99)
+				expect(bottles.verse(number_of_bottles)).to eq(
+					"#{number_of_bottles} bottles of beer on the wall, #{number_of_bottles} bottles of beer.\nTake one down and pass it around, #{ number_of_bottles - 1} bottles of beer on the wall.\n\n"
 					)
 			end
 		end
