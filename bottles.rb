@@ -8,7 +8,8 @@ class Bottles
 	end
 
 	def verse(number)
-		"#{quantity(number)} #{container(number)} of beer on the wall, #{quantity(number)} #{container(number)} of beer.\n".capitalize + "#{action(number)}, #{quantity(number - 1)} #{container(number - 1)} of beer on the wall.\n\n".capitalize
+		"#{quantity(number)} #{container(number)} of beer on the wall, #{quantity(number)} #{container(number)} of beer.\n".capitalize + 
+		"#{action(number)}, #{quantity(number - 1)} #{container(number - 1)} of beer on the wall.\n\n".capitalize
 	end
 
 	private
